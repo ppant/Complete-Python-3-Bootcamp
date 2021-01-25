@@ -1,7 +1,7 @@
 import unittest
 import cap
 
-class TestCap(unittest.TestCase):
+class TestCap(unittest.TestCase): #inherit TesCase class
     
     def test_one_word(self):
         text = 'python'
@@ -14,9 +14,10 @@ class TestCap(unittest.TestCase):
         self.assertEqual(result, 'Monty Python')
         
     def test_with_apostrophes(self):
-        text = "monty python's flying circus"
+        text = "monty python s flying circus"
         result = cap.cap_text(text)
-        self.assertEqual(result, "Monty Python's Flying Circus")
+        self.assertEqual(result, "Monty Pythons Flying Circus")
+
         
 if __name__ == '__main__':
     unittest.main()
